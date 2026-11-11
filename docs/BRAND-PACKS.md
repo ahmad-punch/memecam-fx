@@ -77,4 +77,4 @@ Use JPG or PNG files, ideally around 1000 px and under 2 MB each.
 
 - The **classic** pack must stay in `index.json`, because it's the fallback if a pack fails to load.
 - Pictures someone picks with *Change…* in the popup override the pack's picture for that person only. *Use pack's* switches back.
-- Keep pictures you're allowed to share within your company. This repo is private for that reason.
+- Only add pictures you're allowed to share. This repo is public, so for a company pack with internal logos or photos, keep it in a private fork.

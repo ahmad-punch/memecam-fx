@@ -9,4 +9,4 @@
 
 ## Meme pictures
 
-The pictures in `packs/classic/` and `packs/_shared/` are well-known internet meme stills. Their copyright belongs to their respective owners. They are included for private, internal, non-commercial fun only. Don't publish this repository publicly with them included.
+The pictures in `packs/classic/` and `packs/_shared/` are well-known internet meme stills. Their copyright belongs to their respective owners. They are included for non-commercial fun only, and no ownership is claimed. If you own one of them and want it removed, open an issue and it will be taken out.
