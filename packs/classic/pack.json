@@ -1,0 +1,15 @@
+{
+  "name": "Classic",
+  "description": "Absolute Cinema face-swap, $100 cash rain, the Office facepalm.",
+  "theme": {
+    "accent": "#ffcf4a", "accentInk": "#1a1520", "bg": "#141118", "card": "#1e1a24",
+    "line": "#2e2836", "text": "#eee8f4", "dim": "#9a90a8"
+  },
+  "cinema": { "label": "Absolute Cinema", "image": "cinema.jpg", "caption": "ABSOLUTE CINEMA" },
+  "facepalm": { "label": "Facepalm", "image": "../_shared/facepalm.png", "opacity": 0.5 },
+  "rain": {
+    "label": "Cash rain", "style": "bills", "symbol": "$", "value": "100",
+    "palette": [["#a9d18e", "#5f8f45"], ["#b7d9a0", "#6b9a52"], ["#9cc784", "#557f3d"]]
+  },
+  "dust": { "colors": ["#423a34"] }
+}

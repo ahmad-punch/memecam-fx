@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MemeCam FX preview</title>
+<link rel="icon" href="../icons/icon32.png">
+<link rel="stylesheet" href="preview.css">
+<!-- Same pipeline a call site gets: settings bridge, then the camera hook. -->
+<script src="../content.js"></script>
+<script src="../page-hook.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <img src="../icons/icon48.png" alt="">
+    <div><h1>MemeCam FX preview</h1><p id="status">Starting…</p></div>
+  </header>
+
+  <div class="stage">
+    <video id="video" autoplay muted playsinline></video>
+    <button id="start" class="primary" hidden>Turn on camera</button>
+  </div>
+
+  <div class="controls" aria-label="Trigger effects">
+    <button data-key="KeyS">Snap (vanish / return)</button>
+    <button data-key="KeyM">Rain</button>
+    <button data-key="KeyC">Cinema on/off</button>
+    <button data-key="KeyF">Facepalm on/off</button>
+  </div>
+
+  <section class="how">
+    <h2>Gestures</h2>
+    <ul>
+      <li><b>Snap</b> your fingers: you turn to dust. Snap again to come back.</li>
+      <li><b>Double snap</b> quickly: rain from your brand pack.</li>
+      <li><b>Both hands up</b>, palms open, and hold: cinema mode.</li>
+      <li><b>Hand over your eyes</b> and hold: facepalm.</li>
+    </ul>
+    <p>This page shows exactly what people on a call will see. Change the brand pack and options from the toolbar icon; they apply here instantly.</p>
+  </section>
+</main>
+<script src="preview.js"></script>
+</body>
+</html>

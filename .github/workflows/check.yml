@@ -1,0 +1,25 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate brand packs
+        run: node scripts/validate-packs.mjs
+
+      - name: Syntax check
+        run: |
+          for f in page-hook.js content.js preview/preview.js; do node --check "$f"; done
+          for f in engine/engine.js packs/packs.js popup/popup.js; do node --input-type=module --check < "$f"; done
+          node -e "JSON.parse(require('fs').readFileSync('manifest.json','utf8'))"

@@ -1,0 +1,12 @@
+{
+  "name": "Party",
+  "description": "Glitter vanish, confetti rain, main-character cinema.",
+  "theme": {
+    "accent": "#ff4fd8", "accentInk": "#20051c", "bg": "#160a1c", "card": "#22102a",
+    "line": "#3a1f45", "text": "#fbe9ff", "dim": "#b391c0"
+  },
+  "cinema": { "label": "Main character", "caption": "MAIN CHARACTER ENERGY" },
+  "facepalm": { "label": "Facepalm", "image": "../_shared/facepalm.png", "opacity": 0.5 },
+  "rain": { "label": "Confetti", "style": "emoji", "items": ["🎉", "🥳", "🎊", "✨", "🪩", "🎈"] },
+  "dust": { "colors": ["#ff4fd8", "#ffd23f", "#4fd1ff", "#b388ff"] }
+}

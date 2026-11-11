@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MemeCam FX</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <img src="../icons/icon48.png" alt="">
+  <div class="grow"><h1>MemeCam FX</h1><p>Meme effects for your camera in Meet</p></div>
+  <button id="try" class="ghost" title="Open a preview page with your camera">Try it</button>
+</header>
+
+<section class="pack">
+  <label for="pack" class="label">Brand pack</label>
+  <div class="row">
+    <select id="pack" class="grow"></select>
+    <div id="swatches" class="swatches" aria-hidden="true"></div>
+  </div>
+  <p id="packDesc" class="dim"></p>
+</section>
+
+<section>
+  <div class="row"><div>Effects on<small>Turn off to send your normal camera</small></div>
+    <label class="switch"><input type="checkbox" id="enabled"><span class="slider"></span></label></div>
+  <div class="note" id="rejoin">Turn your camera off and on again in the call (or reload the tab) for this to apply.</div>
+</section>
+
+<section>
+  <div class="row"><div>Snap to vanish<small>Snap again to come back</small></div>
+    <label class="switch"><input type="checkbox" id="snap"><span class="slider"></span></label></div>
+  <div class="row"><div>Double snap → <span id="rainLabel">Cash rain</span><small>Adds a short pause before a single snap acts</small></div>
+    <label class="switch"><input type="checkbox" id="rain"><span class="slider"></span></label></div>
+  <div class="row"><div>Snap sensitivity</div>
+    <select id="sensitivity"><option value="low">Low</option><option value="normal">Normal</option><option value="high">High</option></select></div>
+</section>
+
+<section>
+  <div class="row"><div>Both hands up → <span id="cinemaLabel">Absolute Cinema</span><small id="cinemaHint">Your face placed into the picture, live</small></div>
+    <label class="switch"><input type="checkbox" id="cinema"><span class="slider"></span></label></div>
+  <div class="pic">
+    <div class="thumb" id="cinemaPrev"></div>
+    <div class="pic-actions">
+      <span class="dim" id="cinemaSrc">From pack</span>
+      <div class="btns"><button id="cinemaPick">Change…</button><button id="cinemaClear">Use pack's</button></div>
+    </div>
+    <input type="file" id="cinemaFile" accept="image/*" hidden>
+  </div>
+</section>
+
+<section>
+  <div class="row"><div>Hand over eyes → <span id="palmLabel">Facepalm</span><small>Picture fades in over you</small></div>
+    <label class="switch"><input type="checkbox" id="facepalm"><span class="slider"></span></label></div>
+  <div class="pic">
+    <div class="thumb" id="palmPrev"></div>
+    <div class="pic-actions">
+      <span class="dim" id="palmSrc">From pack</span>
+      <div class="btns"><button id="palmPick">Change…</button><button id="palmClear">Use pack's</button></div>
+    </div>
+    <input type="file" id="palmFile" accept="image/*" hidden>
+  </div>
+</section>
+
+<section>
+  <div class="row"><div>Blur my background<small>Use instead of Meet's blur so effects stay sharp</small></div>
+    <label class="switch"><input type="checkbox" id="bgBlur"><span class="slider"></span></label></div>
+  <div class="row"><div>Fix backwards self-view<small>Your preview shows what others see</small></div>
+    <label class="switch"><input type="checkbox" id="unmirror"><span class="slider"></span></label></div>
+  <div class="row"><div>Show tracking (debug)<small>Others will see this too</small></div>
+    <label class="switch"><input type="checkbox" id="debug"><span class="slider"></span></label></div>
+</section>
+
+<p class="error" id="error" role="alert"></p>
+
+<footer class="dim">
+  Keyboard backups in the call tab: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> snap,
+  <kbd>C</kbd> cinema, <kbd>M</kbd> rain, <kbd>F</kbd> facepalm.<br>
+  Tip: lean out of frame for 2 seconds after your camera turns on so it learns the room behind you.
+  <div class="ver" id="ver"></div>
+</footer>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

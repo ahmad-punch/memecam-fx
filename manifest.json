@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "MemeCam FX",
+  "version": "1.0.0",
+  "description": "Meme effects for your camera in Google Meet: snap to vanish, double-snap rain, hands up for cinema, facepalm. Switchable brand packs.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "MemeCam FX",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://teams.cloud.microsoft/*",
+        "https://*.zoom.us/*",
+        "https://discord.com/*",
+        "https://app.slack.com/*",
+        "https://whereby.com/*"
+      ],
+      "js": ["page-hook.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://teams.cloud.microsoft/*",
+        "https://*.zoom.us/*",
+        "https://discord.com/*",
+        "https://app.slack.com/*",
+        "https://whereby.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["engine/engine.html"],
+      "matches": [
+        "https://meet.google.com/*",
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://teams.cloud.microsoft/*",
+        "https://*.zoom.us/*",
+        "https://discord.com/*",
+        "https://app.slack.com/*",
+        "https://whereby.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "minimum_chrome_version": "111"
+}

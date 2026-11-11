@@ -1,0 +1,40 @@
+{
+  "name": "Office",
+  "description": "Per-my-last-email cinema, raining coffee and paperclips.",
+  "theme": {
+    "accent": "#4f9dff",
+    "accentInk": "#04142b",
+    "bg": "#0f141c",
+    "card": "#161e2a",
+    "line": "#26313f",
+    "text": "#e8eef7",
+    "dim": "#8d9bb0"
+  },
+  "cinema": {
+    "label": "Per my last email",
+    "caption": "PER MY LAST EMAIL"
+  },
+  "facepalm": {
+    "label": "Facepalm",
+    "image": "../_shared/facepalm.png",
+    "opacity": 0.5
+  },
+  "rain": {
+    "label": "Corporate rain",
+    "style": "emoji",
+    "items": [
+      "☕",
+      "📎",
+      "📈",
+      "📊",
+      "💼",
+      "🗂️"
+    ]
+  },
+  "dust": {
+    "colors": [
+      "#5a6270",
+      "#8d96a3"
+    ]
+  }
+}
